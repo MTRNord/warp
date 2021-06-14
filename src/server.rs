@@ -67,6 +67,7 @@ macro_rules! addr_incoming {
     ($addr:expr) => {{
         let mut incoming = AddrIncoming::bind($addr)?;
         incoming.set_nodelay(true);
+        incoming.set_keepalive(Some(Duration::new(7200, 0)));
         let addr = incoming.local_addr();
         (addr, incoming)
     }};
