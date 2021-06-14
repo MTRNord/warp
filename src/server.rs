@@ -4,6 +4,7 @@ use std::convert::Infallible;
 use std::error::Error as StdError;
 use std::future::Future;
 use std::net::SocketAddr;
+use std::time::Duration;
 #[cfg(feature = "tls")]
 use std::path::Path;
 
